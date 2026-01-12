@@ -20,10 +20,25 @@ export default function App() {
       {/* Foreground UI */}
       <div className="content">
         <div className="navbar">
-          <div className="brand">React Bits</div>
-          <div className="links">
-            <a href="#">Home</a>
-            <a href="#">Docs</a>
+          <div className="navbar-brand">LiquidEther</div>
+          
+          <div className="navbar-tabs">
+            <a href="#" className="tab">Home</a>
+            <a href="#" className="tab">Features</a>
+            <a href="#" className="tab">Docs</a>
+            <a href="#" className="tab">Gallery</a>
+            <a href="#" className="tab">Contact</a>
+          </div>
+
+          <div className="navbar-right">
+            <div className="search-bar">
+              <input type="text" placeholder="Search..." />
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </div>
+            <button className="navbar-btn">Sign In</button>
           </div>
         </div>
 

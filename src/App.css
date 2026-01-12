@@ -66,35 +66,119 @@ body,
   z-index: 10;
   height: 100%;
   color: white;
+  pointer-events: auto;
 }
 
 /* Navbar */
 .navbar {
-  width: min(900px, 92%);
-  margin: 28px auto 0;
-  padding: 14px 22px;
-  border-radius: 999px;
+  width: min(1200px, 94%);
+  margin: 20px auto 0;
+  padding: 16px 28px;
+  border-radius: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(16px);
+  gap: 40px;
 }
 
-.brand {
-  font-weight: 600;
+.navbar-brand {
+  font-weight: 700;
+  font-size: 18px;
+  background: linear-gradient(135deg, #5227FF, #FF9FFC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
 }
 
-.links a {
-  color: rgba(255, 255, 255, 0.85);
+.navbar-tabs {
+  display: flex;
+  gap: 32px;
+  flex: 1;
+}
+
+.navbar-tabs .tab {
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
-  margin-left: 18px;
   font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.links a:hover {
+.navbar-tabs .tab:hover {
   color: white;
+}
+
+.navbar-tabs .tab::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #5227FF, #FF9FFC);
+  transition: width 0.3s ease;
+}
+
+.navbar-tabs .tab:hover::after {
+  width: 100%;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  pointer-events: auto;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  width: 140px;
+  font-size: 13px;
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-bar svg {
+  color: rgba(255, 255, 255, 0.6);
+  flex-shrink: 0;
+}
+
+.navbar-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
+
+.navbar-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Hero */
@@ -141,6 +225,7 @@ body,
   border-radius: 999px;
   font-weight: 600;
   font-size: 15px;
+  pointer-events: auto;
 }
 
 .btn.primary {
